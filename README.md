@@ -6,6 +6,7 @@
 - kubectl
 - Kubernetes cluster (e.g., Minikube or Docker Desktop Kubernetes)
 
+---
 ### Build & Run Locally with Docker
 Step 1: Build Docker images
 From the project root:
@@ -28,7 +29,7 @@ docker run --rm --network host grpc-client
 Note: The client connects to localhost:50051 by default.
 You should see the client output, either the response or a cancellation error after 2 seconds.
 
-
+---
 ### Deploy on Kubernetes
 Step 1: Push images to your container registry (Optional)
 Tag and push both images:
@@ -65,7 +66,7 @@ Step 5: Run the client Job
 kubectl apply -f k8s/grpc-client-job.yaml
 kubectl logs job/grpc-client
 ```
-
+---
 ### Notes
 - The client connects to the gRPC server inside Kubernetes using the service DNS name grpc-server:50051.
 - The server listens on all interfaces (:50051) for incoming connections.
