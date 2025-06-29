@@ -1,0 +1,14 @@
+# grpc-client-job.yaml
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: grpc-client
+spec:
+  template:
+    spec:
+      containers:
+      - name: grpc-client
+        image: saitejagarlapati/grpc-client:latest
+        command: ["/client"]
+      restartPolicy: Never
+  backoffLimit: 0
