@@ -5,6 +5,7 @@
 - Docker
 - kubectl
 - Kubernetes cluster (e.g., Minikube or Docker Desktop Kubernetes)
+- minikube
 
 ---
 ### Build & Run Locally with Docker
